@@ -1,0 +1,327 @@
+:root {
+  --basic-black: #000000;
+  --basic-light-red: #FB565A;
+  --basic-red: #E74246;
+  --basic-dark-red: #D7373B;
+  --basic-light-green: #00CA74;
+  --basic-green: #00BC6C;
+  --basic-dark-green: #00AA62;
+  --basic-light-yellow: #EFC84A;
+  --basic-yellow: #EAB534;
+  --basic-dark-yellow: #E5A722;
+  --basic-social-gray: #E1E1E1;
+  --basic-input-light-gray: #D7DCDE;
+  --basic-input-gray: #B4B9BB;
+  --basic-buttons-light-gray: #EEEEEE;
+  --basic-buttons-gray: #DFDFDF;
+  --basic-buttons-dark-gray: #D5D5D5;
+  --basic-buttons-active: #DBDBDB;
+  --basic-arrow-dark: #231F20;
+  --basic-filter-gray: #4D4D4D;
+  --basic-text: #283136;
+  --basic-logo-gray: #A6A6A6;
+  --basic-white: #ffffff;
+  --basic-bg:#888888;
+
+}
+
+
+body {
+  min-width: 1178px; /* Или 1440? */
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  /* "Это необходимо?"
+  background-image: url("../img/bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;*/
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navigation {
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--basic-black);
+  background-color: var(--basic-buttons-light-gray);
+}
+
+
+.navigation-list {
+  list-style: none;
+}
+/* Почему надо дописывать черный цвет для тега "а" и он не наследуется от боди?*/
+.navigation-list a,
+.navigation-cart a {
+  color: var(--basic-black);
+}
+
+.navigation-list a:hover,
+.navigation-cart a:hover,
+.navigation-list a:focus,
+.navigation-cart a:focus
+{
+  color: var(--basic-light-red);
+}
+
+.navigation-list a:active,
+.navigation-cart a:active
+{
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.header-logo:active
+{
+  /*background-color: var(--basic-logo-gray); Думаю правильнее с ним,
+  т.к. цвет задан в макете, но он прямоугольником не в размер становиться. Не справиться)*/
+  opacity: 0.3;
+}
+
+.services {
+  list-style: none;
+}
+
+.services-item {
+  text-align: left;
+}
+
+.services-item h3 {
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.button {
+font: inherit;
+text-align: center;
+font-size: 16px;
+line-height: 18px;
+color: var(--basic-white);
+padding: 17px 40px 15px 39px;
+text-transform: uppercase;
+border: none;
+vertical-align: middle;
+}
+
+a.button-websites {/*этот работает*/
+  background-color: var(--basic-light-red);
+}
+
+a.button-websites:hover,
+a.button-websites:focus {/*Почему не работает без добавления а?*/
+  background-color: var(--basic-red);
+}
+
+a.button-websites:active {/*Почему не работает без добавления а?*/
+  background-color: var(--basic-dark-red);
+  /*Как сделать прозрачность надписи 30%? Не получается совсем. Пытался обернуть тег "а" в див
+  с классом, но тогда кнопка эта на всю ширину страницы*/
+}
+
+
+/*Почему после нажатия на кнопку становится цветом --basic-red,
+а не --basic-light-red и свой цвет при наведении не меняет?
+Становится изначальной после нажатия на другую кнопку. ) */
+
+a.button-applications {
+  background-color: var(--basic-light-green);
+}
+
+a.button-applications:hover,
+a.button-applications:focus {
+  background-color: var(--basic-green);
+}
+
+a.button-applications:active {
+  background-color: var(--basic-dark-green);
+  }
+
+
+a.button-presentations {
+  background-color: var(--basic-light-yellow);
+}
+
+a.button-presentations:hover,
+a.button-presentations:focus {
+  background-color: var(--basic-yellow);
+}
+
+a.button-presentations:active {
+  background-color: var(--basic-dark-yellow);
+}
+
+
+
+.button-contact {
+padding: 17px 44px 15px 44px;
+background-color: var(--basic-light-red);
+border-radius: 3px;
+}
+
+.contact h3 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.social {
+  text-align: left;
+}
+
+.social ul {
+  list-style: none;
+}
+
+
+.social-button {
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  background-color: var(--basic-social-gray);
+  display: flex;
+}
+
+.social-button img {
+  margin: auto;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--basic-red);
+}
+
+.social-button:active {
+  background-color: var(--basic-dark-red);
+  /*и опять проблема с 3-м видом, что делать с иконкой?*/
+}
+
+.footer-discounts {
+font: inherit;
+text-align: center;
+}
+
+.footer-discounts h2 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.footer-discounts p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.witeus h2 {
+  font-size: 45px;
+  line-height: 53px;
+  text-align: left;
+}
+
+.witeus-item input,
+.witeus-item textarea {
+  font: inherit;
+  background-color: transparent;
+  border: 2px solid var(--basic-input-light-gray);
+  color: var(--basic-black); /*как поменять цвет текста в поле ввода?*/
+  border-radius: 3px;
+  /*font-size: 16px;
+  line-height: 18px;*/
+}
+
+.witeus-item {color: var(--basic-black);}
+
+
+.witeus-item input:hover,
+.witeus-item textarea:hover {
+  border-color: var(--basic-input-gray);
+}
+
+.witeus-item input:focus
+.witeus-item textarea:focus {
+  border-color: var(--basic-black);
+}
+
+.witeus-item input:invalid { /*когда всплывает подпись что невалидное значение,
+  бордер черный, но потом становится красным. Как убать черный?*/
+  border-color: var(--basic-red);
+}
+
+
+.button-submit {
+padding: 17px 83px 15px 83px;
+background-color: var(--basic-light-red);
+border-radius: 3px;
+}
+
+/*PAGE 2*/
+
+.shop {
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.filter legend {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.filter ul {
+  list-style: none;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.filter li {
+color: var(--basic-black);
+}
+
+.filter input:hover,
+.filter input:focus
+ {
+opacity: 0.4;
+}
+
+.filter li:active {
+opacity: 0.3;
+}
+
+.filter input:active
+ {
+opacity: 0.1;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-pages {
+  font: inherit;
+  list-style: none;
+  line-height: 18px;
+}
+
+
+.catalog-page a {
+  font: inherit;
+  text-align: center;
+  border: none;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: var(--basic-buttons-light-gray);
+  padding: 50px 50px 50px 50px;
+  border-radius: 3px;
+  color: var(--basic-black);
+} /*Здесь я что-то вообще запутался*/
