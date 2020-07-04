@@ -166,6 +166,7 @@ fill: var(--basic-logo-gray);
   vertical-align: middle;
 }
 
+
 .websites {
   background-image: url("img/websites.png");
   width: 300px;
@@ -238,9 +239,22 @@ a.button-presentations:active {
   line-height: 30px;
 }
 
+footer{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.social{
+margin: 0;
+}
+
 .social-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 9px;
+  margin: 0;
+  width: 247px;
   list-style: none;
-  text-align: left;
 }
 
 .social-button {
@@ -283,8 +297,9 @@ a.button-presentations:active {
 }
 
 .footer-discounts {
-  font: inherit;
-  text-align: center;
+  justify-self: left;
+  width: 542px;
+  margin: 0;
 }
 
 .footer-discounts h2 {
@@ -297,12 +312,38 @@ a.button-presentations:active {
   line-height: 22px;
 }
 
+.witeus {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 760px;
+  margin: 0;
+}
+
 .witeus h2 {
   font-size: 45px;
   line-height: 53px;
   text-align: left;
+  margin: 0;
+  margin-bottom: 37px;
 }
 
+
+.witeus-name {
+  width: 356px;
+}
+
+.witeus-email {
+  width: 356px;
+}
+
+.witeus-comment {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 760px;
+
+}
 
 .witeus-item input,
 .witeus-item textarea {
@@ -314,7 +355,9 @@ a.button-presentations:active {
 
 }
 
-.witeus-item {color: var(--basic-black);}
+.witeus-item {
+  color: var(--basic-black);
+}
 
 
 .witeus-item input:hover,
@@ -347,17 +390,40 @@ a.button-presentations:active {
   line-height: 55px;
 }
 
+
+.shop-page{  /*Почему такой селектор не работает shop. section?*/
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-content: start;
+  margin: 0;
+  padding: 0;
+}
+
+.filters {
+  width: 260px;
+}
+
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  border: none;
+}
+
 .filter legend {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
+  margin-bottom: 16px;
 }
 
 .filter ul {
   list-style: none;
   font-size: 16px;
   line-height: 19px;
+  padding: 0;
+  margin: 0;
 }
 
 .filter li {
@@ -377,9 +443,28 @@ color: var(--basic-black);
   opacity: 0.1;
 }
 
+.catalog {
+  margin-left: 140px;
+}
+
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
   list-style: none;
 }
+
+.catalog-list li {
+width: 360px;
+height: 620px;
+margin: 0;
+margin-right: 40px;
+margin-bottom: 30px;
+}
+
+
 
 .catalog-pages {
   font: inherit;

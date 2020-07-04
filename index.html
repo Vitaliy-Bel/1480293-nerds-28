@@ -74,28 +74,34 @@
         </div>
        </section>
     </main>
-    <footer>
+  <footer>
+    <div class="social">
        <h2 class="visually-hidden">Наши соц-сети</h2>
        <!--<section class="social">-->
-          <ul class="social-list">
+       <ul class="social-list">
             <li>
-              Вконтакте
+              <span class="visually-hidden"> Вконтакте </span>
               <a class="social-button" href="#">
-                <img src="img/vk-icon.svg" alt="Вконтакте" width="26px" height="15px">
+                <!--<img src="img/vk-icon.svg" alt="Вконтакте" width="26px" height="15px">-->
+                <div class="vk-icon"></div>
               </a>
             </li>
-            <li>Фейсбук
+            <li>
+              <span class="visually-hidden">Фейсбук</span>
               <a class="social-button" href="#">
-                <img src="img/fb-icon.svg" alt="Фейсбук" width="12px" height="22px">
-
+                <!--<img src="img/fb-icon.svg" alt="Фейсбук" width="12px" height="22px">-->
+                <div class="fb-icon"></div>
               </a>
            </li>
-           <li>Инстаграм
+           <li>
+              <span class="visually-hidden">Инстаграм </span>
               <a class="social-button" href="#">
-                <img src="img/insta-icon.svg" alt="Инстаграм" width="21px" height="21px">
+                <!--<img src="img/insta-icon.svg" alt="Инстаграм" width="21px" height="21px">-->
+                <div class="insta-icon"></div>
               </a>
            </li>
         </ul>
+    </div>
      <!--</section>-->
     <div class="footer-discounts">
       <h2>Давайте дружить, это выгодно!</h2>
@@ -104,16 +110,15 @@
   </footer>
     <section class="witeus">
       <h2>  Напишите нам  </h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form class="witeus-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="witeus-item">
+            /*необходимо 2 ниже инпута разбить еще на 2 класса? чтобы друг над другом сделать?*/
              <label for="witeus-name">Ваше имя:</label>
              <input id="witeus-name" type="text" name="name" placeholder="Имя Фамилия">
-          </div>
-          <div class="witeus-item">
              <label for="witeus-email">Ваш email:</label>
              <input id="witeus-email" type="email" name="email" placeholder="email@example.com">
           </div>
-          <div class="witeus-item">
+          <div class="witeus-comment">
              <label for="witeus-comment">Текст письма:</label>
              <textarea name="comment" id="witeus-comment" rows="5">В свободной форме</textarea>
           </div>

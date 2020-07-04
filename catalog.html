@@ -31,7 +31,7 @@
     </header>
     <main>
       <h1 class="shop">Магазин готовых шаблонов</h1>
-      <section>
+      <section class="shop-page">
         <div class="filters">
         <h3 class="visually-hidden">Фильтр товаров</h3>
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
@@ -73,14 +73,14 @@
                   </li>
                   <li>
                     <input type="checkbox" name="specificity-basket" id="basket">
-                    <label for="basket">Новости</label>
+                    <label for="basket">Корзина</label>
                   </li>
                 </ul>
             </fieldset>
             <button type="submit">Показать</button>
           </form>
         </div>
-        <div>
+        <div class="catalog">
           <h3 class="visually-hidden">Каталог шаблонов</h3>
           <ul class="catalog-list">
             <li>
@@ -122,59 +122,56 @@
        </section>
     </main>
     <footer>
-       <h2 class="visually-hidden">Контакты</h2>
-       <div class="contact">
-         <h3>NЁRDS DESIGN STUDIO</h3>
-         <p>191186, Санкт-Петербург,<br>
-           ул. Б. Конюшенная, д. 19/8<br><br>
-           тел. +7 (812) 275-75-75</p>
-         <a class="button button-contact" href="#">Напишите нам</a>
-       </div>
-       <h2 class="visually-hidden">Наши соц-сети</h2>
-       <!--<section class="social">-->
-          <ul class="social-list">
-            <li>
-              Вконтакте
-              <a class="social-button" href="#">
-                <img src="img/vk-icon.svg" alt="Вконтакте" width="26px" height="15px">
-              </a>
-            </li>
-            <li>Фейсбук
-              <a class="social-button" href="#">
-                <img src="img/fb-icon.svg" alt="Фейсбук" width="12px" height="22px">
-
-              </a>
-           </li>
-           <li>Инстаграм
-              <a class="social-button" href="#">
-                <img src="img/insta-icon.svg" alt="Инстаграм" width="21px" height="21px">
-              </a>
-           </li>
-        </ul>
-     <!--</section>-->
-    <div class="footer-discounts">
-      <h2>Давайте дружить, это выгодно!</h2>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
-    </div>
-  </footer>
-    <section class="witeus">
-      <h2>  Напишите нам  </h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="witeus-item">
-             <label for="witeus-name">Ваше имя:</label>
-             <input id="witeus-name" type="text" name="name" placeholder="Имя Фамилия">
-          </div>
-          <div class="witeus-item">
-             <label for="witeus-email">Ваш email:</label>
-             <input id="witeus-email" type="email" name="email" placeholder="email@example.com">
-          </div>
-          <div class="witeus-item">
-             <label for="witeus-comment">Текст письма:</label>
-             <textarea name="comment" id="witeus-comment" rows="5">В свободной форме</textarea>
-          </div>
-          <button type="submit" class="button button-submit">отправить</button>
-        </form>
-        <button type="button">Закрыть</button>
+      <div class="social">
+         <h2 class="visually-hidden">Наши соц-сети</h2>
+         <!--<section class="social">-->
+         <ul class="social-list">
+              <li>
+                <span class="visually-hidden"> Вконтакте </span>
+                <a class="social-button" href="#">
+                  <!--<img src="img/vk-icon.svg" alt="Вконтакте" width="26px" height="15px">-->
+                  <div class="vk-icon"></div>
+                </a>
+              </li>
+              <li>
+                <span class="visually-hidden">Фейсбук</span>
+                <a class="social-button" href="#">
+                  <!--<img src="img/fb-icon.svg" alt="Фейсбук" width="12px" height="22px">-->
+                  <div class="fb-icon"></div>
+                </a>
+             </li>
+             <li>
+                <span class="visually-hidden">Инстаграм </span>
+                <a class="social-button" href="#">
+                  <!--<img src="img/insta-icon.svg" alt="Инстаграм" width="21px" height="21px">-->
+                  <div class="insta-icon"></div>
+                </a>
+             </li>
+          </ul>
+      </div>
+       <!--</section>-->
+      <div class="footer-discounts">
+        <h2>Давайте дружить, это выгодно!</h2>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </footer>
+      <section class="witeus">
+        <h2>  Напишите нам  </h2>
+          <form class="witeus-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="witeus-item">
+              /*необходимо 2 ниже инпута разбить еще на 2 класса? чтобы друг над другом сделать?*/
+               <label for="witeus-name">Ваше имя:</label>
+               <input id="witeus-name" type="text" name="name" placeholder="Имя Фамилия">
+               <label for="witeus-email">Ваш email:</label>
+               <input id="witeus-email" type="email" name="email" placeholder="email@example.com">
+            </div>
+            <div class="witeus-comment">
+               <label for="witeus-comment">Текст письма:</label>
+               <textarea name="comment" id="witeus-comment" rows="5">В свободной форме</textarea>
+            </div>
+            <button type="submit" class="button button-submit">отправить</button>
+          </form>
+          <button type="button">Закрыть</button>
       </section>
   </body>
 </html>
