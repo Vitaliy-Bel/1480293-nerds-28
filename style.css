@@ -45,6 +45,19 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page {
   height: 100%;
 }
@@ -75,60 +88,95 @@ header {
 }
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
+  width: 1170px;
+  margin: 0 10px;
+  padding: 0;
 }
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  width: 440px;
+  width: 440px; /*Задал высоту, можно?*/
   margin: 0;
   padding: 0;
-  justify-content: space-around;
+  justify-content: space-between;
+  min-height: 114px;
 }
 
-.navigation-cart {
-  display: flex;
-  max-width: 160px;
-  padding-left: 50px;
-}
-
-.cart-icon {
-  background-image: url("img/cart-icon.svg");
-  width: 15px;
-  height: 15px;
-}
 
 .navigation-list a,
 .navigation-cart a {
   color: var(--basic-black);
+  display: block;
+  padding-top: 75px;
+  padding-bottom: 9px;
 }
+
+.navigation-list-index,
+.navigation-catalog-index {
+  border-bottom: 2px solid var(--basic-light-red);
+}
+
+
 
 .navigation-list a:hover,
 .navigation-cart a:hover,
 .navigation-list a:focus,
-.navigation-cart a:focus
-{
+.navigation-cart a:focus {
   color: var(--basic-light-red);
 }
 
 .navigation-list a:active,
-.navigation-cart a:active
-{
+.navigation-cart a:active {
   color: var(--basic-black);
   opacity: 0.3;
 }
 
-.header-logo svg:active
-{
-fill: var(--basic-logo-gray);
+.header-logo {
+  color: var(--basic-black);
+  display: flex;
+  align-items: flex-end;
+  min-height: 114px;
+}
+
+.header-logo:active {
+  fill: var(--basic-logo-gray);
+}
+
+.navigation-cart {
+  display: flex;
+  max-width: 210px;
+  padding-left: 50px;
+}
+
+.navigation-cart { /*почему нельзя сделать .cart display: block;  почему так не работает??*/
+display: block;
+}
+
+.cart {
+  padding-left: 50px;
+  position: relative;
+}
+
+.cart::before {
+  content: "";
+  position: absolute;
+  top: 82px;
+  right: 100px;
+  background-image: url("img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 15px;
+  height: 15px;
 }
 
 .our-service {
-  margin-bottom: 30px;
-  outline: 5px solid rgba(255, 0, 0 , 0.3);
+  width: 1100px;
+  margin-bottom: 50px;
+  margin-top: 80px;
+  padding: 0 10px;
+
 }
 /*По ширине не получается Наши услуги.*/
 
@@ -148,13 +196,18 @@ fill: var(--basic-logo-gray);
 .services-item h3 {
   font-size: 24px;
   line-height: 30px;
+  margin: 0; /*здесь первоначально маржин был 24px, но я не могу понять почему*/
+  margin-bottom: 16px;
 }
 
 .services-item p {
-  margin: 0 10px;
+  margin: 0;
+  padding: 0;
+
 }
 
 .button {
+  display: inline-block;
   font: inherit;
   text-align: center;
   font-size: 16px;
@@ -163,26 +216,38 @@ fill: var(--basic-logo-gray);
   padding: 17px 40px 15px 39px;
   text-transform: uppercase;
   border: none;
+  border-radius: 3px;
   vertical-align: middle;
+  margin-top: 32px;
+  margin-bottom: 80px;
 }
 
 
-.websites {
+.services-websites h3::before{
+  display: flex;
+  content: "";
   background-image: url("img/websites.png");
   width: 300px;
   height: 146px;
+  margin-bottom: 25px;
 }
 
-.applications {
+.services-applications h3::before {
+  display: flex;
+  content: "";
   background-image: url("img/applications.png");
   width: 300px;
   height: 146px;
+  margin-bottom: 25px;
 }
 
-.presentations {
+.services-presentations h3::before {
+  display: flex;
+  content: "";
   background-image: url("img/presentations.png");
   width: 300px;
   height: 146px;
+  margin-bottom: 25px;
 }
 
 
@@ -226,6 +291,153 @@ a.button-presentations:active {
   background-color: var(--basic-dark-yellow);
 }
 
+.article {
+  display: flex;
+  flex-direction: row;
+  width: 1170px;
+  justify-content: space-between;
+  border-top: 2px solid var(--basic-buttons-light-gray);
+  border-bottom: 2px solid var(--basic-buttons-light-gray);
+}
+
+.article-list h3 {
+  font: inherit;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 45px
+}
+
+.article-list p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.article-list span {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.article-list ul {
+  list-style: none;
+
+}
+
+.article-picture {
+  display: flex;
+  flex-wrap: wrap;
+  width: 360px;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+
+}
+
+.article-picture-text{
+  margin: 0;
+  font: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align:  center;
+  margin-bottom: 31px;
+}
+
+.article-picture-text::before {
+  display: flex;
+  content: "";
+  background-image: url("img/nerds-illustration.png");
+  width: 360px;
+  height: 208px;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 37px;
+}
+
+.article-picture-advantages {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 75px;
+}
+
+.article-picture-advantages span {
+  font-size: 45px;
+  line-height: 64px;
+  font-weight: bold;
+}
+
+.article-picture-advantages sup {
+  font-size: 26px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.article-picture-advantages p {
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 11px;
+}
+
+
+.projects {
+  display: flex;
+  font: inherit;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style: none;
+  width: 1085px;
+  margin: 0;
+  padding: 0;
+  padding-left: 32px;
+  padding-top: 19px;
+  padding-bottom: 44px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.academy {
+  position: relative;
+  width: 199px;
+  height: 68px;
+  background-image: url("img/logo-htmlacademy.png");
+  opacity: 0.4;
+}
+
+.borodinski {
+  width: 209px;
+  height: 90px;
+  background-image: url("img/logo-borodinski.png");
+  opacity: 0.4;
+}
+
+
+.pink {
+  width: 182px;
+  height: 55px;
+  background-image: url("img/logo-pink.png");
+  opacity: 0.4;
+}
+
+
+.mishka {
+  width: 173px;
+  height: 84px;
+  background-image: url("img/logo-mishka.png");
+  opacity: 0.4;
+}
+
+.academy::after {
+  content: "";
+  position: absolute;
+  right: -48px;
+  bottom: 8px;
+  width: 2px;
+  height: 52px;
+  background-color: var(--basic-buttons-light-gray);
+}
 
 
 .button-contact {
@@ -238,6 +450,8 @@ a.button-presentations:active {
   font-size: 18px;
   line-height: 30px;
 }
+
+
 
 footer{
   display: grid;
@@ -258,32 +472,27 @@ margin: 0;
 }
 
 .social-button {
+  display: flex;
   width: 81px;
   height: 81px;
   border-radius: 50%;
   background-color: var(--basic-social-gray);
-  display: flex;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+
 }
 
 .vk-icon {
   background-image: url("img/vk-icon.svg");
-  width: 26px;
-  height: 15px;
-  margin: auto;
 }
 
 .fb-icon {
   background-image: url("img/fb-icon.svg");
-  width: 12px;
-  height: 22px;
-  margin: auto;
 }
 
 .insta-icon {
   background-image: url("img/insta-icon.svg");
-  width: 21px;
-  height: 21px;
-  margin: auto;
 }
 
 .social-button:hover,
@@ -295,6 +504,8 @@ margin: 0;
   background-color: var(--basic-dark-red);
   /*и опять проблема с 3-м видом, что делать с иконкой?*/
 }
+
+
 
 .footer-discounts {
   justify-self: left;
@@ -382,6 +593,9 @@ margin: 0;
   background-color: var(--basic-light-red);
   border-radius: 3px;
 }
+
+
+
 
 /*PAGE 2*/
 

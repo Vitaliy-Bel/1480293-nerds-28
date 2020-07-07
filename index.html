@@ -17,15 +17,15 @@
           </svg>
         </a>
         <ul class="navigation-list">
-          <li><a href="#">Студия</a></li>
+          <li><a class="navigation-list-index" href="#">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
         <div class="navigation-cart">
             <!--<img src="img/cart-icon.svg" alt="Корзина">-->
-            <div class="cart-icon"></div>
-            <a href="#"> Корзина</a>
+            <!--<div class="cart-icon"></div>-->
+            <a class="cart" href="#">Корзина</a>
         </div>
       </nav>
     </header>
@@ -36,7 +36,7 @@
         <ul class="services">
           <li class="services-item services-websites">
             <!--<img src="img/websites.png" alt="Вэб-Сайты" width="300px" height="146px">-->
-            <div class="websites"></div>
+            <!--<div class="websites"></div>-->
             <h3>Вэб-Сайты</h3>
             <p>
               Мир никогда не будет прежним после того как увидит ваш сайт
@@ -45,7 +45,7 @@
           </li>
           <li class="services-item services-applications">
             <!--<img src="img/applications.png" alt="Приложения" width="300px" height="146px">-->
-            <div class="applications"></div>
+            <!--<div class="applications"></div>-->
             <h3>Приложения</h3>
             <p>
               Покорите топ-10 приложений в AppStore и Google Play
@@ -54,7 +54,7 @@
           </li>
           <li class="services-item services-presentations">
             <!--<img src="img/presentations.png" alt="Презентации" width="300px" height="146px">-->
-            <div class="presentations"></div>
+            <!--<div class="presentations"></div>-->
             <h3>Презентации</h3>
             <p>
               Вы даже не подозреваете, насколько вы изумительны!
@@ -63,6 +63,46 @@
           </li>
         </ul>
       </section>
+      <section class="article">
+        <div class="article-list">
+          <h3>Мы — маленькая, но гордая <br> дизайн-студия из Краснодара.</h3>
+          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
+              превыше креатива. Работаем не покладая рук, как роботы.</p>
+          <span>Выполняем заказы на разработку:</span>
+          <ul class="article-list-orders">
+            <li><div class="line">
+            </div>Веб-сайтов любой сложности</li>
+            <li><div class="line">
+            </div>Мобильных приложений для iOS и Android</li>
+            <li><div class="line">
+            </div> <p>Слайдшоу и видео для корпоративных презентаций</p></li>
+          </ul>
+        </div>
+        <div class="article-picture">
+          <!--<p class="article-nerds-illustration"></p>-->
+          <p class="article-picture-text">с 2004 года Любим точность во всем:</p>
+          <ul class="article-picture-advantages">
+            <li>
+              <span>146<sup>%</sup></span>
+              <p>Уровень самоотдачи</p>
+            </li>
+            <li>
+              <span>100<sup>%</sup></span>
+              <p>Соблюдение сроков</p>
+            </li>
+            <li>
+              <span>50<sup>%</sup></span>
+              <p>Минимальная предоплата</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <ul class="projects">
+        <li class="academy"></li>
+        <li class="borodinski"></li>
+        <li class="pink"></li>
+        <li class="mishka"></li>
+      </ul>
       <section>
       <h2 class="visually-hidden">Контакты</h3>
         <div class="contact">
@@ -80,24 +120,18 @@
        <!--<section class="social">-->
        <ul class="social-list">
             <li>
-              <span class="visually-hidden"> Вконтакте </span>
-              <a class="social-button" href="#">
-                <!--<img src="img/vk-icon.svg" alt="Вконтакте" width="26px" height="15px">-->
-                <div class="vk-icon"></div>
+              <a class="social-button vk-icon" href="#">
+                <span class="visually-hidden"> Вконтакте </span>
               </a>
             </li>
             <li>
-              <span class="visually-hidden">Фейсбук</span>
-              <a class="social-button" href="#">
-                <!--<img src="img/fb-icon.svg" alt="Фейсбук" width="12px" height="22px">-->
-                <div class="fb-icon"></div>
+              <a class="social-button fb-icon" href="#">
+                <span class="visually-hidden">Фейсбук</span>
               </a>
            </li>
            <li>
-              <span class="visually-hidden">Инстаграм </span>
-              <a class="social-button" href="#">
-                <!--<img src="img/insta-icon.svg" alt="Инстаграм" width="21px" height="21px">-->
-                <div class="insta-icon"></div>
+              <a class="social-button insta-icon" href="#">
+                <span class="visually-hidden">Инстаграм </span>
               </a>
            </li>
         </ul>
