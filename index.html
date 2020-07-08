@@ -70,12 +70,9 @@
               превыше креатива. Работаем не покладая рук, как роботы.</p>
           <span>Выполняем заказы на разработку:</span>
           <ul class="article-list-orders">
-            <li><div class="line">
-            </div>Веб-сайтов любой сложности</li>
-            <li><div class="line">
-            </div>Мобильных приложений для iOS и Android</li>
-            <li><div class="line">
-            </div> <p>Слайдшоу и видео для корпоративных презентаций</p></li>
+            <li>Веб-сайтов любой сложности</li>
+            <li>Мобильных приложений для iOS и Android</li>
+            <li>Слайдшоу и видео для корпоративных презентаций</li>
           </ul>
         </div>
         <div class="article-picture">
@@ -115,28 +112,24 @@
        </section>
     </main>
   <footer>
-    <div class="social">
-       <h2 class="visually-hidden">Наши соц-сети</h2>
-       <!--<section class="social">-->
-       <ul class="social-list">
-            <li>
-              <a class="social-button vk-icon" href="#">
-                <span class="visually-hidden"> Вконтакте </span>
-              </a>
-            </li>
-            <li>
-              <a class="social-button fb-icon" href="#">
-                <span class="visually-hidden">Фейсбук</span>
-              </a>
-           </li>
-           <li>
-              <a class="social-button insta-icon" href="#">
-                <span class="visually-hidden">Инстаграм </span>
-              </a>
-           </li>
-        </ul>
-    </div>
-     <!--</section>-->
+   <h2 class="visually-hidden">Наши соц-сети</h2>
+   <ul class="social-list">
+        <li>
+          <a class="social-button vk-icon" href="#">
+            <span class="visually-hidden"> Вконтакте </span>
+          </a>
+        </li>
+        <li>
+          <a class="social-button fb-icon" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+       </li>
+       <li>
+          <a class="social-button insta-icon" href="#">
+            <span class="visually-hidden">Инстаграм </span>
+          </a>
+       </li>
+    </ul>
     <div class="footer-discounts">
       <h2>Давайте дружить, это выгодно!</h2>
       <p>Скидка 10% для друзей из социальных сетей.</p>
@@ -145,20 +138,22 @@
     <section class="witeus">
       <h2>  Напишите нам  </h2>
         <form class="witeus-form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="witeus-item">
-            /*необходимо 2 ниже инпута разбить еще на 2 класса? чтобы друг над другом сделать?*/
+          <div class="witeus-name">
              <label for="witeus-name">Ваше имя:</label>
              <input id="witeus-name" type="text" name="name" placeholder="Имя Фамилия">
+          </div>
+          <div class="witeus-email">
              <label for="witeus-email">Ваш email:</label>
              <input id="witeus-email" type="email" name="email" placeholder="email@example.com">
           </div>
+
           <div class="witeus-comment">
              <label for="witeus-comment">Текст письма:</label>
              <textarea name="comment" id="witeus-comment" rows="5">В свободной форме</textarea>
           </div>
           <button type="submit" class="button button-submit">отправить</button>
         </form>
-        <button type="button">Закрыть</button>
+        <a class="close"></a>
       </section>
   </body>
 </html>

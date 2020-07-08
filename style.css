@@ -295,6 +295,7 @@ a.button-presentations:active {
   display: flex;
   flex-direction: row;
   width: 1170px;
+  margin: 0 10px;
   justify-content: space-between;
   border-top: 2px solid var(--basic-buttons-light-gray);
   border-bottom: 2px solid var(--basic-buttons-light-gray);
@@ -388,8 +389,9 @@ a.button-presentations:active {
   flex-wrap: wrap;
   flex-direction: row;
   list-style: none;
+  position: relative;
   width: 1085px;
-  margin: 0;
+  margin: 0 10px;
   padding: 0;
   padding-left: 32px;
   padding-top: 19px;
@@ -403,22 +405,24 @@ a.button-presentations:active {
   width: 199px;
   height: 68px;
   background-image: url("img/logo-htmlacademy.png");
-  opacity: 0.4;
+  opacity: 0.5;/*сделал побольше т.к. вообще не видно иначе*/
 }
 
 .borodinski {
+  position: relative;
   width: 209px;
   height: 90px;
   background-image: url("img/logo-borodinski.png");
-  opacity: 0.4;
+  opacity: 0.5;/*сделал побольше т.к. вообще не видно иначе*/
 }
 
 
 .pink {
+  position: relative;
   width: 182px;
   height: 55px;
   background-image: url("img/logo-pink.png");
-  opacity: 0.4;
+  opacity: 0.5;/*сделал побольше т.к. вообще не видно иначе*/
 }
 
 
@@ -426,7 +430,7 @@ a.button-presentations:active {
   width: 173px;
   height: 84px;
   background-image: url("img/logo-mishka.png");
-  opacity: 0.4;
+  opacity: 0.5;/*сделал побольше т.к. вообще не видно иначе*/
 }
 
 .academy::after {
@@ -440,36 +444,101 @@ a.button-presentations:active {
 }
 
 
-.button-contact {
-  padding: 17px 44px 15px 44px;
-  background-color: var(--basic-light-red);
-  border-radius: 3px;
+.borodinski::after {
+  content: "";
+  position: absolute;
+  right: -44px;
+  bottom: 23px;
+  width: 2px;
+  height: 52px;
+  background-color: var(--basic-buttons-light-gray);
+}
+
+.pink::after {
+  content: "";
+  position: absolute;
+  right: -55px;
+  bottom: 1px;
+  width: 2px;
+  height: 52px;
+  background-color: var(--basic-buttons-light-gray);
+}
+
+.projects::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: -63px;
+  width: 1180px;
+  height: 2px;
+  background-color: var(--basic-buttons-light-gray);
+} /*Не получается жирная полоса и во всю длинну*/
+
+.projects li:hover,
+.projects li:focus {
+  opacity: 0.2; /*сделал побольше т.к. вообще не видно иначе*/
+}
+
+.projects li:active {
+  opacity: 1;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0;
+  margin-left: 50px;
+  width: 319px;
 }
 
 .contact h3 {
   font-size: 18px;
   line-height: 30px;
+  margin-top: 49px;
+  margin-bottom: 23px;
 }
 
+.contact p {
+  margin: 0;
+
+}
+
+.button-contact {
+  padding: 17px 44px 15px 44px;
+  background-color: var(--basic-light-red);
+  border-radius: 3px;
+  margin: 0;
+  margin-top: 37px;
+  margin-bottom: 47px;
+}
 
 
 footer{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+  align-items: center;
 }
 
-.social{
-margin: 0;
-}
 
 .social-list{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 9px;
-  margin: 0;
+  margin: 68px 0;
+  margin-right: 139px;
   width: 247px;
   list-style: none;
 }
+
+/*.social-list li {
+  display: flex;
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  }*/
+
 
 .social-button {
   display: flex;
@@ -485,7 +554,7 @@ margin: 0;
 
 .vk-icon {
   background-image: url("img/vk-icon.svg");
-}
+  }
 
 .fb-icon {
   background-image: url("img/fb-icon.svg");
@@ -500,15 +569,17 @@ margin: 0;
   background-color: var(--basic-red);
 }
 
+/*.social-list li:active {
+  background-color: var(--basic-dark-red);
+  opacity: 0.3;
+  /*и опять проблема с 3-м видом, что делать с иконкой?
+}*/
+
 .social-button:active {
   background-color: var(--basic-dark-red);
-  /*и опять проблема с 3-м видом, что делать с иконкой?*/
 }
 
-
-
 .footer-discounts {
-  justify-self: left;
   width: 542px;
   margin: 0;
 }
@@ -516,19 +587,24 @@ margin: 0;
 .footer-discounts h2 {
   font-size: 36px;
   line-height: 36px;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .footer-discounts p {
   font-size: 16px;
   line-height: 22px;
+  margin: 0;
 }
 
 .witeus {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   flex-direction: column;
   width: 760px;
   margin: 0;
+  padding: 63px 99px 84px 100px;
 }
 
 .witeus h2 {
@@ -540,12 +616,23 @@ margin: 0;
 }
 
 
-.witeus-name {
-  width: 356px;
+.witeus-name{
+  display: inline-flex;/*Почему если просто флекс они встают друг под другом?*/
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 359px;
+  margin: 0;
+  padding: 0;
+  margin-right: 40px;
 }
 
-.witeus-email {
-  width: 356px;
+.witeus-email{
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 359px;
+  margin: 0;
+  padding: 0;
 }
 
 .witeus-comment {
@@ -553,11 +640,22 @@ margin: 0;
   flex-wrap: wrap;
   flex-direction: column;
   width: 760px;
+  margin: 0;
+  padding: 0;
+  margin-top: 34px;
 
 }
 
-.witeus-item input,
-.witeus-item textarea {
+.witeus-form label {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+.witeus-form input,
+.witeus-form textarea {
   font: inherit;
   background-color: transparent;
   border: 2px solid var(--basic-input-light-gray);
@@ -566,22 +664,22 @@ margin: 0;
 
 }
 
-.witeus-item {
+.witeus-form {
   color: var(--basic-black);
 }
 
 
-.witeus-item input:hover,
-.witeus-item textarea:hover {
+.witeus-form input:hover,
+.witeus-form textarea:hover {
   border-color: var(--basic-input-gray);
 }
 
-.witeus-item input:focus
-.witeus-item textarea:focus {
+.witeus-form input:focus
+.witeus-form textarea:focus {
   border-color: var(--basic-black);
 }
 
-.witeus-item input:invalid { /*когда всплывает подпись что невалидное значение,
+.witeus-form input:invalid { /*когда всплывает подпись что невалидное значение,
   бордер черный, но потом становится красным. Как убрать черный?*/
   border-color: var(--basic-red);
   color: var(--basic-red);
@@ -595,13 +693,47 @@ margin: 0;
 }
 
 
+.close::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  background-image: url("img/close.svg");
+  width: 21px;
+  height: 21px;
+  right: 90px;
+  top: 78px;
+  opacity: 0.3;
+}
 
+.close:hover,
+.close:focus { /*Почему-то не работае*/
+  opacity: 1;
+}
+
+.close:active {
+  opacity: 0.1;
+}
 
 /*PAGE 2*/
 
-.shop {
+main {
+  width: 1170px;  /*Почему нужно заново задавать все*/
+  margin: 0 10px;
+}
+
+header {
+  margin: 0;
+}
+
+
+h1 {
+  padding-top: 78px;
+  padding-bottom: 108px;
+  text-align: center;
+  background-color: var(--basic-buttons-light-gray);
   font-size: 55px;
   line-height: 55px;
+  margin: 0;
 }
 
 
@@ -609,18 +741,18 @@ margin: 0;
   display: grid;
   grid-template-columns: 260px 1fr;
   align-content: start;
+  column-gap: 140px;
   margin: 0;
   padding: 0;
 }
 
 .filters {
-  width: 260px;
+
 }
 
 .filter fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
   border: none;
 }
 
@@ -632,6 +764,95 @@ margin: 0;
   margin-bottom: 16px;
 }
 
+fieldset.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-bottom: 54px;
+
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 32px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+
 .filter ul {
   list-style: none;
   font-size: 16px;
@@ -642,6 +863,24 @@ margin: 0;
 
 .filter li {
 color: var(--basic-black);
+
+}
+
+/*label [for="rubber"] {  Как выбрать можно было?
+margin-bottom: 50px;
+}*/
+
+li [id="rubber"] {
+  margin-bottom: 46px;
+}
+
+li [id="basket"] {
+  margin-bottom: 50px;
+}
+
+.filter label {
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .filter input:hover,
@@ -657,11 +896,7 @@ color: var(--basic-black);
   opacity: 0.1;
 }
 
-.catalog {
 
-
-
-}
 
 .catalog-list {
   display: flex;
