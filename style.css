@@ -910,15 +910,55 @@ li [id="basket"] {
   list-style: none;
 }
 
-.catalog-list li {
-width: 360px;
-height: 620px;
-margin: 0;
-padding: 0;
-margin-bottom: 30px;
+.catalog-list li { /* почему не работает при селекторе .catalog-list li? */
+  position: relative;
+  width: 360px;
+  height: 620px;
+  padding: 0;
+  padding-bottom: 30px;
+  padding-top: 88px;
 }
 
+.catalog-list li::before {
 
+  display: flex;
+  content: "";
+  top: 10px;
+  right: 30px;
+  background-color: var(--basic-filter-gray);
+  height: 40px;
+  width: 360px;
+  opacity: 0.12;
+}
+
+.circle {
+  position: absolute;
+  top: 101px;
+  left: 16px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--basic-white);
+  border-radius: 50%;
+}
+
+.circle-left {
+  top: 101px;
+  left: 16px;
+}
+
+.circle-center {
+  top: 101px;
+  left: 39px;
+}
+
+.circle-right {
+  top: 101px;
+  left: 62px;
+}
+
+.catalog-list li:first-child::before {
+  opacity: 1;
+}
 
 .catalog-pages {
   font: inherit;
